@@ -45,6 +45,11 @@ values."
      spell-checking
      syntax-checking
      version-control
+     (setq-default dotspacemacs-configuration-layers
+                   '((python :variables python-test-runner 'pytest)))
+
+
+
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -269,8 +274,11 @@ you should place your code here."
   (global-set-key (kbd "C-c m") 'delete-other-windows)
   (global-set-key (kbd "M-h")  "->")
   (global-set-key (kbd "M-u")  "<-")
-  (global-set-key (kbd "C-m") 'delete-other-windows)
   (global-set-key (kbd "C-<tab>") 'evil-toggle-fold)
+  (require 'python)
+  (setq python-shell-interpreter "ipython2-2.7")
+  (setq python-shell-interpreter-args "--pylab")
+
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
