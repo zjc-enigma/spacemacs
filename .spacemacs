@@ -33,12 +33,14 @@ values."
      html
      c-c++
      shell-script
+     jekyll
      sql
      git
      osx
      markdown
      chinese
      org
+;;     spacemacs-jekyll
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -267,6 +269,7 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-linum-mode t)
+  (setq-default dotspacemacs-configuration-layers '(jekyll))
   (global-set-key (kbd "M-i")  'split-window-horizontally)
   (global-set-key (kbd "M-o")  'next-multiframe-window)
   (global-set-key (kbd "C-o")  'previous-multiframe-window)
